@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&family=Lato:ital,wght@1,100&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 10% auto;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  /* outline: 10px solid #FFF; */
+  transition: all ease-in-out 200ms;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 120px;
+  right: 3.8rem;
+  left: 3.8rem;
+  height: 150px;
+  background-color: white;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  transition: all ease-in-out 200ms;
+  box-shadow: inset 0px 0px 12px 5px;
+  z-index: -1;
+}
+
+.container:hover, .container:hover::after {
+  /* inset: 10rem 10rem; */
+  background-color: yellow;
+  box-shadow: 8px 3px 40px 40px yellow;
+}
+
+.container:hover::after {
+  /* inset: 10rem 10rem; */
+  box-shadow: inset 0px 0px 25px 50px,
+    2px 1px 45px 15px yellow;
+}
